@@ -16,9 +16,9 @@ test.describe('Playwright Exercises - TestCafe', () => {
   })
   
   test('Exercise 2', async ({page}) => {
-    const MacOsElement = 'macos-radio'
-    await page.getByTestId(MacOsElement).click()
-    await expect(page.getByTestId(MacOsElement)).toBeChecked()
+    const WindowsElement = 'windows-radio'
+    await page.getByTestId(WindowsElement).click()
+    await expect(page.getByTestId(WindowsElement)).toBeChecked()
   })
 
   test('Exercise 3', async ({page}) => {
@@ -41,11 +41,11 @@ test.describe('Playwright Exercises - TestCafe', () => {
   })
 
   test('Exercise 5', async ({page}) => {
-    await page.getByTestId('name-input').type('Netanel')
+    await page.getByTestId('name-input').type('Ran')
     await page.getByText('Support for testing on remote').click()
     await page.getByTestId('parallel-testing-checkbox').check()
     await page.getByTestId('analysis-checkbox').check()
-    await page.getByTestId('macos-radio').check()
+    await page.getByTestId('windows-radio').check()
     await page
       .getByTestId('preferred-interface-select')
       .selectOption('JavaScript API')
@@ -58,7 +58,7 @@ test.describe('Playwright Exercises - TestCafe', () => {
       'https://devexpress.github.io/testcafe/example/thank-you.html',
     )
     await expect(page.getByTestId('thank-you-header')).toHaveText(
-      'Thank you, Netanel!',
+      'Thank you, Ran!',
     )
   })
 })
